@@ -12,6 +12,12 @@ Pandas |Excel |Power BI |Tableau |Jupyter
 
 ## Projects
 
+## Key Projects
+- Financial Profitability Analysis  
+- Financial KPI Dashboard  
+- Automated Financial Reporting  
+- Operational Performance Analysis
+
 ### Sales Analysis
 - Data cleaning
 - Exploratory analysis
@@ -26,7 +32,6 @@ Pandas |Excel |Power BI |Tableau |Jupyter
 - Customer segmentation
 
 Each project focuses on business insights and decision making.
-Data & Strategy graduate interested in consulting.
 
 Contact
 LinkedIn: https://www.linkedin.com/in/alexandra-ngako/
