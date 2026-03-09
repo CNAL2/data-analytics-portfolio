@@ -10,7 +10,7 @@ Python |SQL |Data visualization |Business analytics |Data analysis |Business ana
 # Tools
 Pandas |Excel |Power BI |Tableau |Jupyter
 
-## Projects
+# Projects
 
 ## Key Projects
 - Financial Profitability Analysis  
