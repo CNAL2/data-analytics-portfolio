@@ -1,4 +1,3 @@
-# data-analytics-portfolio
 # Alexandra Ngako – Data Analytics Portfolio
 
 Welcome to my portfolio.
@@ -6,7 +5,10 @@ Welcome to my portfolio.
 I am a Business Analyst with a focus on data analysis, marketing insights and business strategy.
 
 # Skills
-Python | SQL | Data visualization | Business analytics
+Python |SQL |Data visualization |Business analytics |Data analysis |Business analytics |Dashboarding
+
+# Tools
+Pandas |Excel |Power BI |Tableau |Jupyter
 
 ## Projects
 
@@ -24,6 +26,7 @@ Python | SQL | Data visualization | Business analytics
 - Customer segmentation
 
 Each project focuses on business insights and decision making.
+Data & Strategy graduate interested in consulting.
 
 Contact
 LinkedIn: https://www.linkedin.com/in/alexandra-ngako/
