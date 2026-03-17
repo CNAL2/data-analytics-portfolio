@@ -1,116 +1,66 @@
-# Analyse des ventes Online Retail – Insights & Segmentation Client
+📌 Analyse des ventes online retail
+Analyse des ventes d’un site e-commerce – Insights & Segmentation client
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-4B0082?style=for-the-badge&logo=seaborn&logoColor=white)
+Contexte :
 
----
+je suis chargée d’analyser les données de ventes d’un site e-commerce afin de produire des indicateurs de performance, identifier les leviers d’optimisation et proposer des recommandations marketing basées sur les données.
 
-## Table des matières
-- [Contexte](#contexte)
-- [Objectifs du projet](#objectifs-du-projet)
-- [Étapes du projet](#étapes-du-projet)
-  - [1. Préparation des données](#1-préparation-des-données)
-  - [2. Analyse exploratoire (EDA)](#2-analyse-exploratoire-eda)
-  - [3. Statistiques descriptives](#3-statistiques-descriptives)
-  - [4. Test statistique : ANOVA](#4-test-statistique-anova)
-  - [5. Régression linéaire multiple](#5-régression-linéaire-multiple)
-  - [6. Segmentation client (K-means)](#6-segmentation-client-k-means)
-- [Livrables](#livrables)
-- [Compétences développées](#compétences-développées)
-- [Résumé exécutif](#résumé-exécutif)
+Objectif principal : Comprendre la performance commerciale, segmenter les clients et générer des recommandations data-driven.
 
----
+Outils : Python (pandas, matplotlib, seaborn, scikit-learn, statsmodels)
 
-## Contexte
-Vous êtes chargé·e d’analyser les données de ventes d’un site e-commerce afin de produire des indicateurs de performance, identifier des leviers d’optimisation et proposer des recommandations marketing basées sur les données.
+Étapes du projet
+1️⃣ Préparation des données
 
-- **Outils** : Python (pandas, matplotlib, seaborn, scikit-learn, statsmodels)  
-- **Objectif principal** : Comprendre la performance commerciale, segmenter les clients et générer des recommandations data-driven.
+Import et nettoyage : suppression valeurs manquantes et doublons
+Filtrage des transactions annulées (InvoiceNo commençant par “C”)
+Création d’une colonne TotalPrice = Quantity * UnitPrice
 
----
+2️⃣ Analyse exploratoire (EDA)
 
-## Objectifs du projet
-1. Nettoyer et préparer les données de ventes.  
-2. Analyser les tendances et indicateurs clés (ventes, produits, clients, saisonnalité).  
-3. Réaliser des tests statistiques et modèles prédictifs.  
-4. Segmenter les clients pour générer des recommandations marketing.  
+Nombre total de commandes, clients et produits
+Chiffre d’affaires par pays
+Top 10 des produits les plus vendus
+Analyse de la saisonnalité : ventes par mois et par jour de la semaine
+Visualisations clés : histogrammes, courbes, heatmaps, boxplots (minimum 5 visuels différents)
 
----
+3️⃣ Statistiques descriptives
 
-## Étapes du projet
+Moyenne, variance, écart-type des variables quantitatives
+Corrélations entre Quantity, UnitPrice et TotalPrice
 
-### 1. Préparation des données
-- Nettoyage des données : suppression des valeurs manquantes et doublons.  
-- Filtrage des transactions annulées (InvoiceNo commençant par “C”).  
-- Création d’une colonne **TotalPrice = Quantity * UnitPrice**.
+4️⃣ Test statistique : ANOVA
 
----
+Hypothèse : “Le montant moyen des commandes diffère selon les pays”
+Réalisation d’une ANOVA (TotalPrice ~ Country)
+Interprétation : p-value pour valider ou invalider l’hypothèse
 
-### 2. Analyse exploratoire (EDA)
-- Nombre total de commandes, clients et produits.  
-- Chiffre d’affaires par pays.  
-- Top 10 des produits les plus vendus.  
-- Analyse de la saisonnalité : ventes par mois et jour de la semaine.  
+5️⃣ Régression linéaire multiple
 
-**Visualisations** : histogrammes, courbes, heatmaps, scatterplots, boxplots (au moins 5 visuels).
+Modélisation de TotalPrice en fonction de :
+Quantity
+UnitPrice
+Jour de la semaine (extrait de InvoiceDate)
+Pays (encodé en variables fictives)
+Présentation des coefficients, R² et interprétation pratique
 
----
+6️⃣ Segmentation client (Clustering K-means)
 
-### 3. Statistiques descriptives
-- Moyennes, variances, écarts-types.  
-- Analyse des corrélations entre Quantity, UnitPrice et TotalPrice.
+6.1 Construction des indicateurs client
+Montant total dépensé
+Nombre total d’achats
+Quantité totale achetée
+Récence (jours depuis dernière commande)
+Standardisation (z-score)
 
----
+6.2 Segmentation
+Application de K-means pour 2 à 6 clusters
+Sélection du nombre optimal via méthode du coude
+Attribution d’un cluster à chaque client
 
-### 4. Test statistique : ANOVA
-- Hypothèse : "Le montant moyen des commandes diffère selon les pays."  
-- Réalisation d’une ANOVA (**TotalPrice ~ Country**).  
-- Interprétation des résultats (p-value, significativité).
+6.3 Profiling
+Statistiques descriptives par cluster (moyenne / médiane)
+Visualisation : boxplot ou scatter plot coloré par cluster
 
----
-
-### 5. Régression linéaire multiple
-- Modélisation de **TotalPrice** en fonction de :  
-  - Quantity  
-  - UnitPrice  
-  - Jour de la semaine (extrait de InvoiceDate)  
-  - Pays (encodé en variables fictives)  
-- Présentation des coefficients, R² et interprétation pratique.
-
----
-
-### 6. Segmentation client (K-means)
-#### 6.1 Construction des indicateurs
-- Montant total dépensé  
-- Nombre total d’achats  
-- Quantité totale achetée  
-- Récence (jours depuis dernière commande)  
-- Standardisation (z-score)
-
-#### 6.2 Segmentation
-- Application de K-means pour 2 à 6 clusters  
-- Sélection du nombre optimal via la méthode du coude  
-- Attribution d’un cluster à chaque client
-
-#### 6.3 Profiling
-- Statistiques descriptives par cluster (moyenne / médiane)  
-- Visualisation : boxplot ou scatter plot coloré par cluster
-
-#### 6.4 Interprétation marketing
-- Identification des clusters stratégiques  
-- Recommandations marketing basées sur les segments (2 à 4 actions concrètes)
-
----
-
-## Livrables
-- Notebook Python propre et commenté  
-- Rapport synthétique (max 10 pages) :  
-  1. Introduction  
-  2. Préparation des données  
-  3. Analyse exploratoire  
-  4. Analyses statistiques (ANOVA, régression)  
-  5. Segmentation client  
-  6. Recommandations stratégiques  
-  7. Conclusion  
+6.4 Interprétation marketing
+Identification des clusters stratégiques
