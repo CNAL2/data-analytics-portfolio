@@ -13,23 +13,10 @@ Pandas |Excel |Power BI |Tableau |Jupyter
 # Projects
 
 ## Key Projects
-- Financial Profitability Analysis  
-- Financial KPI Dashboard  
-- Automated Financial Reporting  
-- Operational Performance Analysis
-
-### Sales Analysis
-- Data cleaning
-- Exploratory analysis
-- Business insights
-- Sales forecasting
-
-### Marketing Performance
-- Campaign analysis
-- Conversion funnel
-- Dashboard
-- E-commerce KPI analysis
-- Customer segmentation
+1. GenAI Business Insight Assistant (AI / innovation)
+2. Sales & Marketing Performance Analysis (business)
+3. Financial Analytics Dashboard (stratégie)
+4. Automated Reporting & Ops Performance (tech / data)
 
 Each project focuses on business insights and decision making.
 
